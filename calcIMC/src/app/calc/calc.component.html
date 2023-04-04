@@ -1,0 +1,46 @@
+<div class="row">
+<div class="col-md-6">
+  <p><b>Menor que 18,5:</b> Magreza</p>
+  <p><b>18,5 a 24,9:</b> Normal</p>
+  <p><b>25 a 29,9:</b> Sobrepeso</p>
+  <p><b>30 a 34,9:</b> Obesidade grau I</p>
+  <p><b>35 a 39,9:</b> Obesidade grau II</p>
+  <p><b>Maior que 40:</b> Obesidade grau III</p>
+</div>
+<div class="col-md-6 d-flex flex-column bg-light text-dark p-4 rounded border">
+
+  <h2 class="text-center">CALCULO DO IMC</h2>
+  <form action="">
+    <div class="justify-content-center mt-3">
+      <div class="row">
+        <div class="col-md-6"><label>Insira seu peso: </label></div>
+        <div class="col-md-6"><input class="form-control form-control-sm m-1" type="number" name="peso" [(ngModel)]="peso"></div>
+      </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label>Insira sua altura: </label>
+      </div>
+      <div class="col-md-6">
+        <input class="form-control form-control-sm m-1" type="number" name="altura" [(ngModel)]="altura">
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="row mt-1">
+      <div class="col-md-6 mt-1">
+          <button class="btn btn-secondary" (click)="CalcIMC()">Multiplicar</button>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-6">
+      <label class="mt-1">Resultado: </label>
+      </div>
+      <div class="col-md-6">
+          <input class="form-control form-control-sm m-1 bg-secondary text-light" type="number" [value]="resultado" readonly>
+      </div>
+  </div>
+</form>
+</div>
+</div>
