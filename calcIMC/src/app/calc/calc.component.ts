@@ -13,7 +13,9 @@ export class CalcComponent {
 
 
   CalcIMC(){
-   this.resultado = this.peso/(this.altura*this.altura);
+  var altura = 0;
+  altura = this.altura/100;
+   this.resultado = parseFloat((this.peso/(altura*altura)).toFixed(2));
 
    if(this.resultado < 18.5){
     this.msg = "Magreza";

@@ -14,23 +14,23 @@
     <div class="justify-content-center mt-3">
       <div class="row">
         <div class="col-md-6"><label>Insira seu peso: </label></div>
-        <div class="col-md-6"><input class="form-control form-control-sm m-1" type="number" name="peso" [(ngModel)]="peso"></div>
+        <div class="col-md-6"><input placeholder="EX: 62,5" class="form-control form-control-sm m-1" type="number" name="peso" [(ngModel)]="peso"></div>
       </div>
     <div class="row">
       <div class="col-md-6">
         <label>Insira sua altura: </label>
       </div>
       <div class="col-md-6">
-        <input class="form-control form-control-sm m-1" type="number" name="altura" [(ngModel)]="altura">
+        <input placeholder="EX: 165" class="form-control form-control-sm m-1" type="number" name="altura" [(ngModel)]="altura">
       </div>
 
     </div>
 
   </div>
 
-  <div class="row mt-1">
+  <div class="row mt-1 text-center">
       <div class="col-md-6 mt-1">
-          <button class="btn btn-secondary" (click)="CalcIMC()">Multiplicar</button>
+          <button class="btn btn-secondary" (click)="CalcIMC()">Calcular</button>
       </div>
   </div>
   <div class="row">
@@ -39,7 +39,9 @@
       </div>
       <div class="col-md-6">
           <input class="form-control form-control-sm m-1 bg-secondary text-light" type="number" [value]="resultado" readonly>
-      </div>
+      <input class="form-control form-control-sm m-1 bg-secondary text-light" [value]="msg" readonly>
+        </div>
+
   </div>
 </form>
 </div>
